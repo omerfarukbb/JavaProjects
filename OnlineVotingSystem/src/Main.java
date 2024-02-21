@@ -62,6 +62,7 @@ public class Main {
         } else {
             System.out.println("Invalid username!");
         }
+        System.out.println("Returning..");
     }
 
 
@@ -103,7 +104,30 @@ public class Main {
 
 
     private static void votePage(User user) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("----- VOTE PAGE -----");
+        System.out.println("Select one of the followings: ");
+        for (Vote vote: Vote.values()) {
+            System.out.printf("%d for %s\n", vote.ordinal()+1, vote);
+        }
+
+        while (true) {
+            System.out.print("Enter: ");
+            String input = scanner.nextLine();
+            if (!input.matches("\\d+")) {
+                System.out.println("Invalid input! Please enter an integer.");
+                continue;
+            }
+
+            int choice = Integer.parseInt(input);
+            if (1 <= choice && choice <= Vote.values().length) {
+                user.setVote(Vote.values()[choice-1]);
+                System.out.println("Voted successfully!");
+                break;
+            } else {
+                System.out.println("Invalid input! Please enter a valid party number.");
+            }
+        }
     }
 }
 
