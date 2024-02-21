@@ -1,0 +1,7 @@
+C:\Users\omerf\.jdks\openjdk-21.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.3\lib\idea_rt.jar=59985:C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.3\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\omerf\JavaProjects\Sample\out\production\Sample Main
+Hello Java!
+Hello Java!
+Hello Java!
+Hello Java!
+
+Process finished with exit code 0
